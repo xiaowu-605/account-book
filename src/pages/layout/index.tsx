@@ -1,16 +1,12 @@
 import { Outlet } from 'react-router-dom'
 import { TabBar } from 'antd-mobile'
-import {
-  useNavigate,
-  useLocation,
-  MemoryRouter as Router,
-} from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import {
   AddCircleOutline,
   BillOutline,
   ReceivePaymentOutline,
 } from 'antd-mobile-icons'
-import styles from './index.module.css'
+import styles from './index.module.less'
 
 export const Layout = () => {
   const navigate = useNavigate()
