@@ -11,6 +11,9 @@ importers:
       antd-mobile:
         specifier: ^5.42.3
         version: 5.42.3(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      antd-mobile-icons:
+        specifier: ^0.3.0
+        version: 0.3.0
       axios:
         specifier: ^1.20.0
         version: 1.20.0
