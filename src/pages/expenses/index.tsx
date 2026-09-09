@@ -1,56 +1,12 @@
 import styles from './index.module.less'
-import { DownOutline } from 'antd-mobile-icons'
-import { DatePicker } from 'antd-mobile'
 import { useState } from 'react'
+import { Header } from '../components/Header/index'
 
 export const Expenses = () => {
-  const [year, setYear] = useState(new Date().getFullYear())
-  const [month, setMonth] = useState(new Date())
-  const handleConfirm = (val: Date) => {
-    setMonth(val)
-    setYear(val.getFullYear())
-  }
   return (
     <div className="page">
       {/* 顶部 */}
-      <div className={styles.top}>
-        {/* 年月选择 */}
-        <div className={styles.top_time}>
-          <span>{year}</span>
-          <span className={styles.top_time_divider}>|</span>
-          <div>
-            <DatePicker
-              precision="month"
-              value={month}
-              onConfirm={(val) => handleConfirm(val)}
-            >
-              {(value, actions) => (
-                <div
-                  className={styles.billTitle}
-                  onClick={() => actions.open()}
-                >
-                  {value ? value.getMonth() + 1 : '--'}月账单 <DownOutline />
-                </div>
-              )}
-            </DatePicker>
-          </div>
-        </div>
-        {/* 总额显示 */}
-        <div className={styles.top_total}>
-          <div className={styles.top_total_item}>
-            <div className={styles.top_total_item_money}>1300</div>
-            <div className={styles.top_total_item_txt}>支出</div>
-          </div>
-          <div className={`${styles.top_total_item} ${styles.item2}`}>
-            <div className={styles.top_total_item_money}>23300</div>
-            <div className={styles.top_total_item_txt}>收入</div>
-          </div>
-          <div className={styles.top_total_item}>
-            <div className={styles.top_total_item_money}>10</div>
-            <div className={styles.top_total_item_txt}>结余</div>
-          </div>
-        </div>
-      </div>
+      <Header type="month" />
       {/* 详细列表 */}
       <div className={styles.list}>
         <div className={styles.content}>

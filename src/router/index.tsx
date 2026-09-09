@@ -9,6 +9,7 @@ const routes = [
     path: '/',
     element: <Layout />,
     children: [
+      { index: true, element: <Expenses /> },
       {
         path: 'expenses',
         element: <Expenses />,
