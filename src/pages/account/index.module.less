@@ -1,0 +1,107 @@
+.header {
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(135deg, #fff176 0%, #ffb300 100%);
+  position: sticky;
+  top: 0;
+  &_title {
+    text-align: center;
+    font-size: 16px;
+  }
+  &_type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    &_item {
+      padding: 5px 10px;
+      background: #fff;
+      border-radius: 20px;
+      &:nth-child(1) {
+        margin-right: 10px;
+      }
+      &.active {
+        background: #ffb300;
+        color: #fff;
+      }
+    }
+  }
+  &_form {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    &_date {
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      background: #fff;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    &_amount {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      padding: 8px 12px;
+      background: #fff;
+      border-radius: 20px;
+    }
+    &_symbol {
+      margin-right: 4px;
+      font-weight: bold;
+    }
+    &_input {
+      flex: 1;
+    }
+  }
+}
+
+.category {
+  margin: 15px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 12px;
+  &_group {
+    margin-bottom: 10px;
+    &_title {
+      padding-left: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+    }
+    &_grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      margin-top: 5px;
+    }
+  }
+  &_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+    &_emoji {
+      font-size: 24px;
+      line-height: 1;
+      padding: 8px;
+      border-radius: 50%;
+    }
+    &_label {
+      margin-top: 6px;
+      font-size: 12px;
+      color: #666;
+    }
+    &.active &_emoji {
+      background: #fff3cd;
+    }
+    &.active &_label {
+      color: #ffb300;
+      font-weight: bold;
+    }
+  }
+}
+
+.save {
+  margin: 0 15px 15px;
+}
